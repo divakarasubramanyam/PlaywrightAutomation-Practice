@@ -42,7 +42,7 @@ test.describe('Parabank Tests', () => {
         await page.locator('[id="customer.ssn"]').fill('12345');
         await page.locator('[id="customer.username"]').fill('doeedudes');
         await page.locator('[id="customer.password"]').fill('Automation$test');
-        await page.locator('#repeatedPassword').fill('Automation$test1');
+        await page.locator('#repeatedPassword').fill('Automation$test');
         await page.getByRole('button', { name: 'Register' }).click();
         await expect(page.locator('[id="rightPanel"]')).toContainText('Welcome doeedudes');
         await expect(page.getByText('Your account was created successfully. You are now logged in.')).toBeVisible();
