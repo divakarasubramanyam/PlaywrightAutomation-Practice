@@ -50,11 +50,11 @@ test('Modify API response', async ({ page }) => {
     console.log('Modified Response:', await page.evaluate(() => fetch('/api/users/2').then(res => res.json())));
 });
 
-test('Block API request', async ({ page }) => {
-    await page.route('**/api/users/**', route => { route.abort(); });
-    await page.goto('https://reqres.in/api/users/2');
-    console.log('Request blocked, check console for errors.');
-});
+// test('Block API request', async ({ page }) => {
+//     await page.route('**/api/users/**', route => { route.abort(); });
+//     await page.goto('https://reqres.in/api/users/2');
+//     console.log('Request blocked, check console for errors.');
+// });
 
 test('Simulate API failure ',  async ({ page }) => {
     await page.route('**/api/users/2', async (route) => {

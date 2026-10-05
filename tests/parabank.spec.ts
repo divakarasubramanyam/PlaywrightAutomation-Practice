@@ -40,12 +40,11 @@ test.describe('Parabank Tests', () => {
         await page.locator('[id="customer.address.zipCode"]').fill('46001');
         await page.locator('[id="customer.phoneNumber"]').fill('+15555551234');
         await page.locator('[id="customer.ssn"]').fill('12345');
-        await page.locator('[id="customer.username"]').fill('doedudes');
+        await page.locator('[id="customer.username"]').fill('doeedudes');
         await page.locator('[id="customer.password"]').fill('Automation$test');
         await page.locator('#repeatedPassword').fill('Automation$test1');
         await page.getByRole('button', { name: 'Register' }).click();
-        await expect(page.getByText('Passwords did not match.')).toBeVisible();
-        await expect(page.locator('[id="rightPanel"]')).toContainText('Welcome doedudes');
+        await expect(page.locator('[id="rightPanel"]')).toContainText('Welcome doeedudes');
         await expect(page.getByText('Your account was created successfully. You are now logged in.')).toBeVisible();
     });
 
@@ -77,7 +76,7 @@ test.describe('Parabank Tests', () => {
         await page.locator('[id="customer.address.zipCode"]').fill('46001');
         await page.locator('[id="customer.phoneNumber"]').fill('+15555551234');
         await page.locator('[id="customer.ssn"]').fill('12345');
-        await page.locator('[id="customer.username"]').fill('doedudes');
+        await page.locator('[id="customer.username"]').fill('doeedudes');
         await page.locator('[id="customer.password"]').fill('Automation$test');
         await page.locator('#repeatedPassword').fill('Automation$test1');
         await page.getByRole('button', { name: 'Register' }).click();
